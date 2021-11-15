@@ -7,6 +7,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class vBoxf1Controller {
 
     @FXML
@@ -30,19 +34,27 @@ public class vBoxf1Controller {
         //
         //TABLEVIEW ADD DATA
         //Define data in ObservableList
-        final ObservableList<TVMembers> data = FXCollections.observableArrayList(
-                new TVMembers("VBOX 1","59069940","Rohan","Gary","15/10/21","Male"),
-                new TVMembers("VBOX 1","VBOX1","Rohan","Gary","15/10/21","Male")
+        final ObservableList<TVMembers> data = FXCollections.observableArrayList();
+        try {
+            Connection con = DBConnect.getConnection();
+            ResultSet rs = con.createStatement().executeQuery("select * from ipensiondb");
 
-        );
+            while (rs.next()){
+                data.add(new TVMembers(rs.getString("id"),rs.getString("caisse"),rs.getString("nom"),rs.getString("prenom"),rs.getString("dob"),rs.getString("sexe") ));
+                System.out.println(data);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
 
         //Associate data with columns
-        tablecolumn_Caisse.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("caisse"));
-        tablecolumn_NAVS.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("num"));
+        tablecolumn_Caisse.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("id"));
+        tablecolumn_NAVS.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("caisse"));
         tablecolumn_Nom.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("nom"));
         tablecolumn_Prenom.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("prenom"));
         tablecolumn_DOB.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("dob"));
-        tablecolumn_Sexe.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("sex"));
+        tablecolumn_Sexe.setCellValueFactory(new PropertyValueFactory<TVMembers,String>("sexe"));
         //add data to table
         tableview_Members.setItems(data);
 
