@@ -6,9 +6,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
@@ -113,24 +111,147 @@
       </HBox>
       <HBox>
          <children>
-            <TableView fx:id="tableview_Members" prefHeight="772.0" prefWidth="804.0" HBox.hgrow="ALWAYS">
-               <columns>
-                  <TableColumn fx:id="tablecolumn_Caisse" prefWidth="75.0" text="Caisse" />
-                  <TableColumn fx:id="tablecolumn_NAVS" prefWidth="75.0" text="N* AVS" />
-                  <TableColumn fx:id="tablecolumn_Nom" prefWidth="75.0" text="Nom" />
-                  <TableColumn fx:id="tablecolumn_Prenom" prefWidth="75.0" text="Prenom" />
-                  <TableColumn fx:id="tablecolumn_DOB" prefWidth="75.0" text="Date de naissance" />
-                  <TableColumn fx:id="tablecolumn_Sexe" prefWidth="75.0" text="Sexe" />
-                  <TableColumn prefWidth="75.0" text="Natioalite" />
-                  <TableColumn prefWidth="75.0" text="Etat civil" />
-                  <TableColumn prefWidth="75.0" text="Code postal" />
-                  <TableColumn prefWidth="75.0" text="Localite" />
-                  <TableColumn prefWidth="75.0" text="Canton" />
-                  <TableColumn prefWidth="75.0" text="Statut" />
-                  <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Date de deces" />
-               </columns>
-            </TableView>
-            <TextArea prefHeight="302.0" prefWidth="105.0" />
+            <ScrollPane>
+               <content>
+                  <VBox prefHeight="98.0" prefWidth="234.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Region prefHeight="18.0" prefWidth="178.0" />
+                                    <Label text="Date" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="22.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Resulta" textFill="#03cf55" />
+                                    <Region prefHeight="100.0" prefWidth="65.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" text="Notre caisse cantonal" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="52.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Result details" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Region prefHeight="18.0" prefWidth="178.0" />
+                                    <Label text="Date" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="22.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Resulta" textFill="#03cf55" />
+                                    <Region prefHeight="100.0" prefWidth="65.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" text="Notre caisse cantonal" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="52.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Result details" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="63.0" prefHeight="200.0" prefWidth="234.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Region prefHeight="18.0" prefWidth="178.0" />
+                                    <Label text="Date" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="22.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Resulta" textFill="#03cf55" />
+                                    <Region prefHeight="100.0" prefWidth="65.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" text="Notre caisse cantonal" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="52.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Result details" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="116.0" prefHeight="200.0" prefWidth="234.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Region prefHeight="18.0" prefWidth="178.0" />
+                                    <Label text="Date" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="22.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Resulta" textFill="#03cf55" />
+                                    <Region prefHeight="100.0" prefWidth="65.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" text="Notre caisse cantonal" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="52.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Result details" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="168.0" prefHeight="200.0" prefWidth="234.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Region prefHeight="18.0" prefWidth="178.0" />
+                                    <Label text="Date" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="22.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Resulta" textFill="#03cf55" />
+                                    <Region prefHeight="100.0" prefWidth="65.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" text="Notre caisse cantonal" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="52.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Result details" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="221.0" prefHeight="200.0" prefWidth="234.0">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Region prefHeight="18.0" prefWidth="178.0" />
+                                    <Label text="Date" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="22.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Resulta" textFill="#03cf55" />
+                                    <Region prefHeight="100.0" prefWidth="65.0" />
+                                    <Label layoutX="10.0" layoutY="10.0" text="Notre caisse cantonal" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="52.0" prefWidth="234.0">
+                                 <children>
+                                    <Label text="Result details" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <VBox prefHeight="200.0" prefWidth="100.0" />
          </children>
       </HBox>
    </children>

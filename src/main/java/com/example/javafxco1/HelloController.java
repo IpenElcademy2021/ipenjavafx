@@ -187,6 +187,8 @@ public class HelloController {
     public void SwitchToFragment1() throws IOException {
         VBox vBoxf1 = FXMLLoader.load((getClass().getResource("vBoxf1.fxml")));
         vbox_fragment1.getChildren().setAll(vBoxf1);
+        vBoxf1Controller xd = new vBoxf1Controller();
+        xd.initialize();
     }
 
     public void SwitchToFragment2() throws IOException {
