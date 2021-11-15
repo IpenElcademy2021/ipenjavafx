@@ -12,7 +12,7 @@ public class DBConnect {
 
     public static Connection getConnection() throws SQLException {
 
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ipensiondb","root","57831746");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ipensiondb","root","root");
         return connection;
     }
 

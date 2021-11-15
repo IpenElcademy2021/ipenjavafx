@@ -6,14 +6,15 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -113,24 +114,73 @@
       </HBox>
       <HBox>
          <children>
-            <TableView fx:id="tableview_Members" prefHeight="772.0" prefWidth="804.0" HBox.hgrow="ALWAYS">
-               <columns>
-                  <TableColumn fx:id="tablecolumn_Caisse" prefWidth="75.0" text="Caisse" />
-                  <TableColumn fx:id="tablecolumn_NAVS" prefWidth="75.0" text="N* AVS" />
-                  <TableColumn fx:id="tablecolumn_Nom" prefWidth="75.0" text="Nom" />
-                  <TableColumn fx:id="tablecolumn_Prenom" prefWidth="75.0" text="Prenom" />
-                  <TableColumn fx:id="tablecolumn_DOB" prefWidth="75.0" text="Date de naissance" />
-                  <TableColumn fx:id="tablecolumn_Sexe" prefWidth="75.0" text="Sexe" />
-                  <TableColumn prefWidth="75.0" text="Natioalite" />
-                  <TableColumn prefWidth="75.0" text="Etat civil" />
-                  <TableColumn prefWidth="75.0" text="Code postal" />
-                  <TableColumn prefWidth="75.0" text="Localite" />
-                  <TableColumn prefWidth="75.0" text="Canton" />
-                  <TableColumn prefWidth="75.0" text="Statut" />
-                  <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Date de deces" />
-               </columns>
-            </TableView>
-            <TextArea prefHeight="302.0" prefWidth="105.0" />
+            <ScrollPane prefHeight="1959.0" prefWidth="819.0">
+               <content>
+                  <VBox prefHeight="938.0" prefWidth="818.0">
+                     <children>
+                        <TitledPane animated="false" text="Informaion generales">
+                           <content>
+                              <Pane prefHeight="222.0" prefWidth="817.0">
+                                 <children>
+                                    <Label layoutX="55.0" layoutY="41.0" prefHeight="18.0" prefWidth="81.0" text="Nom" />
+                                    <Label layoutX="501.0" layoutY="41.0" text="DOB" />
+                                    <Label layoutX="55.0" layoutY="97.0" text="Prenom" />
+                                    <Label layoutX="501.0" layoutY="97.0" prefHeight="18.0" prefWidth="81.0" text="Sexe" />
+                                    <TextField fx:id="txtNom" layoutX="136.0" layoutY="37.0" />
+                                    <TextField fx:id="txtPrenom" layoutX="136.0" layoutY="93.0" />
+                                    <TextField fx:id="txtDOB" layoutX="576.0" layoutY="37.0" />
+                                    <TextField fx:id="txtSex" layoutX="575.0" layoutY="93.0" />
+                                 </children>
+                              </Pane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="238.0" prefWidth="795.0" text="Relation Affilies">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane prefHeight="184.0" prefWidth="818.0" text="Langue de Correspondance">
+                           <content>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="56.0" layoutY="24.0" text="Langue" />
+                                    <TextField fx:id="txtLangue" layoutX="148.0" layoutY="20.0" />
+                                 </children>
+                              </Pane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane prefHeight="200.0" prefWidth="818.0" text="Address">
+                           <content>
+                              <Pane prefHeight="121.0" prefWidth="822.0">
+                                 <children>
+                                    <Label layoutX="56.0" layoutY="23.0" text="Rue" />
+                                    <Label layoutX="327.0" layoutY="23.0" text="Boite Postal" />
+                                    <Label layoutX="602.0" layoutY="23.0" text="Pays" />
+                                    <TextField fx:id="txtRue" layoutX="56.0" layoutY="52.0" />
+                                    <TextField fx:id="txtPostal" layoutX="310.0" layoutY="52.0" />
+                                    <TextField fx:id="txtPays" layoutX="557.0" layoutY="52.0" />
+                                 </children>
+                              </Pane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" prefHeight="156.0" prefWidth="818.0" text="Telephone">
+                           <content>
+                              <Pane prefHeight="100.0" prefWidth="817.0">
+                                 <children>
+                                    <Label layoutX="48.0" layoutY="12.0" text="Type" />
+                                    <Label layoutX="392.0" layoutY="12.0" text="Numero" />
+                                    <TextField fx:id="txtType" layoutX="22.0" layoutY="33.0" />
+                                    <TextField fx:id="txtNumero" layoutX="365.0" layoutY="33.0" />
+                                 </children>
+                              </Pane>
+                           </content>
+                        </TitledPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <TextArea prefHeight="2354.0" prefWidth="142.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0" />
          </children>
       </HBox>
    </children>
